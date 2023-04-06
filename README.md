@@ -1,6 +1,6 @@
 # Solve_Fuel_Relative_Mass_Factor
 Spacecraft Design Major Assignment
-# 西北工业大学航天飞行器设计大作业
+# 航天飞行器设计大作业
 ## 《某型防空导弹主级燃料相对质量因数计算》
 ### 一、要求：
 1、 根据已知条件，采用**数值积分法**求解相对量运动微分方程组（见png图片），计算燃料相对质量因数。<br>
