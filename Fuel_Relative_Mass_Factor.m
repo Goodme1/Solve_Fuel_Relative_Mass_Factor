@@ -6,7 +6,7 @@ alpha0 = 1.5;theta0 = 26; %角度制
 % 动力系数
 Is = 2156;g = 9.801;
 P = 2.2; %推重比
-p0 = 5800; % 翼载
+p0 = 5880; % 翼载
 
 % 目标运动特性
 vt = 420;
@@ -60,8 +60,8 @@ while y(i) < yt0
     theta_h(i+1) = theta_h(i) + (Kth1 + 2*Kth2 + 2*Kth3 + Kth4)*h/6;
     theta_j(i+1) = theta_h(i+1)*180/pi;
     
-    alpha_h(i+1) = (v(i)*(Kth1 + 2*Kth2 + 2*Kth3 + Kth4)/6 + Is*cos(theta_h(i))/P)/(p*(v(i))^2*cya(i)*Is/(2*P*p0*(1-u(i))) + Is/(1 - u(i)));
-    alpha_j(i+1) = alpha_h(i+1)*180/pi;
+    alpha_h(i) = (v(i)*(Kth1 + 2*Kth2 + 2*Kth3 + Kth4)/6 + Is*cos(theta_h(i))/P)/(p*(v(i))^2*cya(i)*Is/(2*P*p0*(1-u(i))) + Is/(1 - u(i)));
+    alpha_j(i+1) = alpha_h(i)*180/pi;
     cotq = cotq0 - u(i)*Is*vt/(P*g*yt0);
     t(i+1) = yt0/vt*(cotq0 - cotq) + 3;
     xt(i+1) = yt0*cotq;

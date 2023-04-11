@@ -10,7 +10,7 @@ function f = drag_coeff_pred(a_d, m_d)
     ];
     % 定义攻角和马赫数的向量
     alpha_vec_drag = [2 4 6 8 10]; % 攻角，单位为度
-    mach_vec_drag = [1.5 2.1 2.7 3.3 4]; % 马赫数
+    mach_vec_drag = [1.5 2.1 2.7 3.3 4.0]; % 马赫数
     % 进行插值计算
     f = interp2(alpha_vec_drag, mach_vec_drag, drag_coeff, a_d, m_d, 'spline');
 %     f = interp2(alpha_vec_drag, mach_vec_drag, drag_coeff, a_d, m_d, 'linear',0.025);
